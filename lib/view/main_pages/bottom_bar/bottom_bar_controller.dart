@@ -1,20 +1,22 @@
+import 'package:booking/utils/images_path.dart';
+import 'package:booking/view/main_pages/home/home_page.dart';
 import 'package:get/get.dart';
 
 class BottomBarController extends GetxController {
   final List<Map<String, dynamic>> pages = [
     {
       'label': "Home",
-      // 'icon': ImagesPath.bottom_home,
-      // 'page': HomePage(),
+      'icon': ImagesPath.home_bottom,
+      'page': HomePage(),
     },
     {
       'label': "Đơn đặt lịch",
-      // 'icon': ImagesPath.bottom_don_dat_lich,
+      'icon': ImagesPath.search_bottom,
       // 'page': DonDatLichPage(),
     },
     {
       'label': "Tài khoản",
-      // 'icon': ImagesPath.bottom_account,
+      'icon': ImagesPath.user_bottom,
       // 'page': AccountPage(),
     },
   ];
@@ -41,7 +43,7 @@ class BottomBarController extends GetxController {
     update();
   }
 
-    /// double back press
+  /// double back press
   Future<bool> onDoubleBack() {
     final DateTime now = DateTime.now();
     if (currentBackPressTime == null ||

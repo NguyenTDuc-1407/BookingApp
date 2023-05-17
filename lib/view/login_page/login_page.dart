@@ -229,7 +229,7 @@ class LoginPage extends GetView {
                         ),
                         Center(
                           child: InkWell(
-                            onTap: () => controller.onSignIn(),
+                            onTap: () => controller.onNextHomePage(),
                             child: Container(
                               height: MyDimensions.SPACE_SIZE_5X * 2.2,
                               width: MyDimensions.mySize.width * 0.35,
