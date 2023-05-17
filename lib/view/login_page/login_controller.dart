@@ -1,6 +1,4 @@
 import 'package:booking/data/dio/dio_client.dart';
-import 'package:booking/data/model/auth/auth_resquest.dart';
-import 'package:booking/helper/validate.dart';
 import 'package:booking/provider/auth_provider.dart';
 import 'package:booking/routers/router_child/login_router.dart';
 import 'package:flutter/cupertino.dart';
@@ -24,7 +22,7 @@ class LoginController extends GetxController {
     checkInputPassword.text;
     inputPassword.value;
     super.onInit();
-    onSignIn();
+    // onSignIn();
   }
 
   void hideInputPassword() {
@@ -55,28 +53,28 @@ class LoginController extends GetxController {
   ///
   /// on sign in
   ///
-  Future<void> onSignIn() async {
-    final AuthRequest loginRequest = AuthRequest();
-    loginRequest.email = MyValidate.nullOrEmpty(email) ? null : email;
-    loginRequest.password = MyValidate.nullOrEmpty(password) ? null : password;
+  // Future<void> onSignIn() async {
+  //   final AuthRequest loginRequest = AuthRequest();
+  //   loginRequest.email = MyValidate.nullOrEmpty(email) ? null : email;
+  //   loginRequest.password = MyValidate.nullOrEmpty(password) ? null : password;
 
-    authProvider.signin(
-      request: loginRequest,
-      onSuccess: (account) async {
-        if (!MyValidate.nullOrEmpty(account)) {
-          // Save accout logined
-          // _handleSaveAccountLogined(account: account);
-          // sl<SharedPreferenceHelper>().setProfile(account.user!.id.toString());
+  //   authProvider.signin(
+  //     request: loginRequest,
+  //     onSuccess: (account) async {
+  //       if (!MyValidate.nullOrEmpty(account)) {
+  //         // Save accout logined
+  //         // _handleSaveAccountLogined(account: account);
+  //         // sl<SharedPreferenceHelper>().setProfile(account.user!.id.toString());
 
-          // Hide loader overlay
-          // onHideLoaderOverlay();
-          // _onGoToHomePage();
-        }
-        // EasyLoading.dismiss();
-      },
-      onError: (onError) {
-        // print("Error");
-      },
-    );
-  }
+  //         // Hide loader overlay
+  //         // onHideLoaderOverlay();
+  //         // _onGoToHomePage();
+  //       }
+  //       // EasyLoading.dismiss();
+  //     },
+  //     onError: (onError) {
+  //       // print("Error");
+  //     },
+  //   );
+  // }
 }

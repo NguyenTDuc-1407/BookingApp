@@ -13,9 +13,9 @@ class SignUpController extends GetxController {
 
   void hideInputPassword() {
     inputPassword.value = !inputPassword.value;
-
   }
-  void hideInputConfipass(){
+
+  void hideInputConfipass() {
     inputConfiPass.value = !inputConfiPass.value;
   }
 
