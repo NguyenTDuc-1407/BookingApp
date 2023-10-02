@@ -1,5 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
+import 'package:booking/view/forget_password_page/forgot_password_binding.dart';
+import 'package:booking/view/forget_password_page/forgot_password_page.dart';
 import 'package:booking/view/login_page/login_binding.dart';
 import 'package:booking/view/login_page/login_page.dart';
 import 'package:booking/view/main_pages/bottom_bar/bottom_bar_binding.dart';
@@ -12,6 +14,7 @@ class LoginRouter {
   static const String LOGIN = '/login';
   static const String SIGNUP = '/sign_up';
   static const String MAIN = '/main/page';
+  static const String FORGETPASSWORD = '/forget-password';
   static List<GetPage> list = [
     GetPage(
       name: LOGIN,
@@ -27,6 +30,11 @@ class LoginRouter {
       name: MAIN,
       page: () => BottomBarPage(),
       binding: BottomBarBinding(),
+    ),
+        GetPage(
+      name: FORGETPASSWORD,
+      page: () => ForgotPasswordPage(),
+      binding: ForgotPasswordBinding(),
     ),
   ];
 }

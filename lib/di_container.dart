@@ -14,8 +14,8 @@ Future<void> init() async {
   sl.registerSingleton<SharedPreferenceHelper>(
       SharedPreferenceHelper(sharedPreferences));
   sl.registerSingleton<MySize>(MySize());
-  sl.registerLazySingleton<DioClient>(() => DioClient());
+  // sl.registerLazySingleton<DioClient>(() => DioClient());
 
-  sl.registerLazySingleton<AuthProvider>(() => AuthProvider());
-  sl.registerLazySingleton<AuthRespository>(() => AuthRespository());
+  // sl.registerLazySingleton<AuthProvider>(() => AuthProvider());
+  // sl.registerLazySingleton<AuthRespository>(() => AuthRespository());
 }
