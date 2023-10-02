@@ -48,6 +48,7 @@ dependencies:
   flutter_localization: ^0.1.10
   file_picker: ^5.2.7
   firebase_core: ^2.9.0
+  timer_count_down: ^2.2.2
 
 dev_dependencies:
   flutter_test:

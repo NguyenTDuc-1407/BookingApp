@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:booking/helper/dimensions.dart';
+import 'package:booking/utils/app_colors.dart';
 import 'package:booking/utils/images_path.dart';
 import 'package:booking/view/sign_up_pages/sign_up_controller.dart';
 import 'package:flutter/material.dart';
@@ -47,14 +48,13 @@ class SignUpPage extends GetView {
                             text: "Trave",
                             style: TextStyle(
                                 fontSize: MyDimensions.FONT_SIZE_H1 * 2,
-                                color: Colors.white),
+                                color: AppColors.white),
                             children: [
                               TextSpan(
                                 text: "ally",
                                 style: TextStyle(
                                     fontSize: MyDimensions.FONT_SIZE_H1 * 2,
-                                    color: const Color.fromARGB(
-                                        255, 74, 169, 188)),
+                                    color: AppColors.blue),
                               ),
                             ],
                           ),
@@ -67,14 +67,14 @@ class SignUpPage extends GetView {
                   child: Container(
                     margin:
                         EdgeInsets.only(top: MyDimensions.SPACE_SIZE_5X * 10),
-                    height: MyDimensions.mySize.height * 0.748,
+                    height: MyDimensions.mySize.height * 0.747,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.only(
                             topLeft:
                                 Radius.circular(MyDimensions.BORDER_RADIUS_6X),
                             topRight:
                                 Radius.circular(MyDimensions.BORDER_RADIUS_6X)),
-                        color: const Color.fromRGBO(124, 124, 124, 75)),
+                        color: AppColors.transparentBorder),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -86,7 +86,7 @@ class SignUpPage extends GetView {
                             "Welcome!",
                             style: TextStyle(
                                 fontSize: MyDimensions.FONT_SIZE_H1 * 2,
-                                color: Colors.white),
+                                color: AppColors.white),
                           ),
                         ),
                         Container(
@@ -96,7 +96,7 @@ class SignUpPage extends GetView {
                           child: Text(
                             'Email ',
                             style: TextStyle(
-                                color: Colors.white,
+                                color: AppColors.white,
                                 fontSize: MyDimensions.FONT_SIZE_SPAN_SMALL),
                           ),
                         ),
@@ -106,17 +106,16 @@ class SignUpPage extends GetView {
                                 top: MyDimensions.SPACE_SIZE_1X),
                             padding: EdgeInsets.only(
                                 left: MyDimensions.ONE_UNIT_SIZE * 9,
-                                bottom: MyDimensions.ONE_UNIT_SIZE * 12),
+                                bottom: MyDimensions.ONE_UNIT_SIZE * 11),
                             width: MyDimensions.mySize.width * 0.8,
                             height: MyDimensions.SPACE_SIZE_5X * 2,
                             decoration: BoxDecoration(
-                              color: const Color.fromRGBO(246, 246, 247, 1),
+                              color: AppColors.whiteTextFile,
                               borderRadius: BorderRadius.circular(5),
                             ),
                             child: TextField(
                               controller: controller.checkInputEmail,
-                              style: const TextStyle(
-                                  color: Color.fromARGB(255, 74, 169, 188)),
+                              style: const TextStyle(color: AppColors.blue),
                               keyboardType: TextInputType.emailAddress,
                               decoration: const InputDecoration(
                                   border: InputBorder.none),
@@ -130,7 +129,7 @@ class SignUpPage extends GetView {
                           child: Text(
                             'Password ',
                             style: TextStyle(
-                                color: Colors.white,
+                                color: AppColors.white,
                                 fontSize: MyDimensions.FONT_SIZE_SPAN_SMALL),
                           ),
                         ),
@@ -142,11 +141,11 @@ class SignUpPage extends GetView {
                               ),
                               padding: EdgeInsets.only(
                                   left: MyDimensions.ONE_UNIT_SIZE * 9,
-                                  bottom: MyDimensions.ONE_UNIT_SIZE * 12),
+                                  bottom: MyDimensions.ONE_UNIT_SIZE * 11),
                               width: MyDimensions.mySize.width * 0.8,
                               height: MyDimensions.SPACE_SIZE_5X * 2,
                               decoration: BoxDecoration(
-                                color: const Color.fromRGBO(246, 246, 247, 1),
+                                color: AppColors.whiteTextFile,
                                 borderRadius: BorderRadius.circular(5),
                               ),
                               child: TextField(
@@ -154,8 +153,7 @@ class SignUpPage extends GetView {
                                 onChanged: (value) =>
                                     controller.actionIconPassword(),
                                 obscureText: controller.inputPassword.value,
-                                style: const TextStyle(
-                                    color: Color.fromARGB(255, 74, 169, 188)),
+                                style: const TextStyle(color: AppColors.blue),
                                 decoration: InputDecoration(
                                   border: InputBorder.none,
                                   suffixIcon: Visibility(
@@ -183,7 +181,7 @@ class SignUpPage extends GetView {
                           child: Text(
                             'Confirm Password ',
                             style: TextStyle(
-                                color: Colors.white,
+                                color: AppColors.white,
                                 fontSize: MyDimensions.FONT_SIZE_SPAN_SMALL),
                           ),
                         ),
@@ -195,11 +193,11 @@ class SignUpPage extends GetView {
                               ),
                               padding: EdgeInsets.only(
                                   left: MyDimensions.ONE_UNIT_SIZE * 9,
-                                  bottom: MyDimensions.ONE_UNIT_SIZE * 12),
+                                  bottom: MyDimensions.ONE_UNIT_SIZE * 11),
                               width: MyDimensions.mySize.width * 0.8,
                               height: MyDimensions.SPACE_SIZE_5X * 2,
                               decoration: BoxDecoration(
-                                color: const Color.fromRGBO(246, 246, 247, 1),
+                                color: AppColors.whiteTextFile,
                                 borderRadius: BorderRadius.circular(5),
                               ),
                               child: TextFormField(
@@ -214,8 +212,7 @@ class SignUpPage extends GetView {
                                   }
                                   return null;
                                 },
-                                style: const TextStyle(
-                                    color: Color.fromARGB(255, 74, 169, 188)),
+                                style: const TextStyle(color: AppColors.blue),
                                 decoration: InputDecoration(
                                   border: InputBorder.none,
                                   suffixIcon: Visibility(
@@ -246,14 +243,14 @@ class SignUpPage extends GetView {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(
                                   MyDimensions.BORDER_RADIUS_4X),
-                              color: const Color.fromARGB(255, 74, 169, 188),
+                              color: AppColors.blue,
                             ),
                             child: Center(
                               child: Text(
                                 "Sign Up",
                                 style: TextStyle(
                                     fontSize: MyDimensions.FONT_SIZE_SPAN * 1.2,
-                                    color: Colors.white),
+                                    color: AppColors.white),
                               ),
                             ),
                           ),
@@ -268,7 +265,7 @@ class SignUpPage extends GetView {
                             Text(
                               "Already have an account?",
                               style: TextStyle(
-                                  color: Colors.white,
+                                  color: AppColors.white,
                                   fontSize: MyDimensions.FONT_SIZE_SPAN),
                             ),
                             SizedBox(
@@ -279,8 +276,7 @@ class SignUpPage extends GetView {
                               child: Text(
                                 "Login In",
                                 style: TextStyle(
-                                    color:
-                                        const Color.fromARGB(255, 74, 169, 188),
+                                    color: AppColors.blue,
                                     fontSize: MyDimensions.FONT_SIZE_H3),
                               ),
                             )
